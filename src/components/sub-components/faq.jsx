@@ -10,11 +10,7 @@ const Faqs = () => {
   const fetchFaq = async () => {
     try {
       const { data } = await axios.get(
-<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/fetch-faq"
-=======
-        "http://localhost:4001/api/faq/fetch-faq"
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setFaq(data);
     } catch (error) {

@@ -18,11 +18,7 @@ const TestimonailOperations = () => {
   const fetchTestimonial = async () => {
     try {
       const { data } = await axios.get(
-<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/fetch-testimonial"
-=======
-        "http://localhost:4001/api/testimonial/fetch-testimonial"
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setTestimonial(data);
       setTotalTestimonial(data.length);
@@ -34,11 +30,7 @@ const TestimonailOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/add-testimonial",
-=======
-        "http://localhost:4001/api/testimonial/add-testimonial",
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         values
       );
       toast.success("Testimonial Added!");
@@ -51,11 +43,7 @@ const TestimonailOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/delete-testimonial/${id}`
-=======
-        `http://localhost:4001/api/testimonial/delete-testimonial/${id}`
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       toast.success("Testimonial deleted");
       fetchTestimonial();
@@ -77,11 +65,7 @@ const TestimonailOperations = () => {
     try {
       const { name, imageUrl, country, message } = editedTestimonialData;
       await axios.patch(
-<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/update-testimonial/${editingTestimonial._id}`,
-=======
-        `http://localhost:4001/api/testimonial/update-testimonial/${editingTestimonial._id}`,
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         {
           name,
           imageUrl,

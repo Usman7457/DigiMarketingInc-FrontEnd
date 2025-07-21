@@ -17,11 +17,7 @@ const UserOperations = () => {
   const fetchUsers = async () => {
     try {
       const { data } = await axios.get(
-<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/fetch-users"
-=======
-        "http://localhost:4001/api/users/fetch-users"
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setUsers(data);
       setTotalUser(data.length);
@@ -33,14 +29,10 @@ const UserOperations = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
-<<<<<<< HEAD
       await axios.post(
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/register",
         values
       );
-=======
-      await axios.post("http://localhost:4001/api/users/register", values);
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("Registered successfully!");
       fetchUsers();
     } catch (error) {
@@ -72,13 +64,9 @@ const UserOperations = () => {
         return;
       }
 
-<<<<<<< HEAD
       await axios.delete(
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/delete-user/${id}`
       );
-=======
-      await axios.delete(`http://localhost:4001/api/users/delete-user/${id}`);
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("User deleted successfully");
       fetchUsers();
     } catch (error) {
@@ -99,11 +87,7 @@ const UserOperations = () => {
     try {
       const { userName, email, password } = editedUserData;
       await axios.patch(
-<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/update-user/${editingUser._id}`,
-=======
-        `http://localhost:4001/api/users/update-user/${editingUser._id}`,
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         {
           userName,
           email,

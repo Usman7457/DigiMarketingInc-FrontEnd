@@ -14,11 +14,7 @@ const Pricing = () => {
   const fetchPricing = async () => {
     try {
       const { data } = await axios.get(
-<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/fetch-pricing"
-=======
-        "http://localhost:4001/api/pricing/fetch-pricing"
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setPricing(data);
     } catch (error) {

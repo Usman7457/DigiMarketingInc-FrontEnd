@@ -13,11 +13,7 @@ const ResetPassword = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       await axios.patch(
-<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/reset-password/${id}`,
-=======
-        `http://localhost:4001/api/users/reset-password/${id}`,
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         {
           password: values.password,
         }

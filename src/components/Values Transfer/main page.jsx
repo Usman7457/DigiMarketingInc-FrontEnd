@@ -18,11 +18,7 @@ const Subscribers = () => {
   const fetchSubscriber = async () => {
     try {
       const { data } = await axios.get(
-<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/fetch-subscriber"
-=======
-        "http://localhost:4001/api/subscriber/fetch-subscriber"
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setSubscriber(data);
       setTotalSubscribers(data.length);
@@ -34,11 +30,7 @@ const Subscribers = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/delete-subscriber/${id}`
-=======
-        `http://localhost:4001/api/subscriber/delete-subscriber/${id}`
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       toast.success("Subscriber deleted");
       fetchSubscriber();
@@ -49,11 +41,7 @@ const Subscribers = () => {
   };
 
   const handleNextPage = () => {
-<<<<<<< HEAD
     navigate("/next-page", { state: { totalSubscribers } });
-=======
-    navigate('/next-page', { state: { totalSubscribers } });
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
   };
 
   return (

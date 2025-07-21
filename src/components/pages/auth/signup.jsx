@@ -9,14 +9,10 @@ const SignUp = () => {
   const navigate = useNavigate();
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
-<<<<<<< HEAD
       await axios.post(
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/register",
         values
       );
-=======
-      await axios.post("http://localhost:4001/api/users/register", values);
->>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("Registered successfully!");
       navigate("/login");
     } catch (error) {
