@@ -13,7 +13,7 @@ const Team = () => {
   const fetchTeam = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/fetch-team"
+        "https://digi-marketing-inc-back-end.vercel.app/api/team/fetch-team"
       );
       setTeam(data);
     } catch (error) {

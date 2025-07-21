@@ -18,7 +18,7 @@ const BlogOperations = () => {
   const fetchBlog = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/fetch-blog"
+        "https://digi-marketing-inc-back-end.vercel.app/api/blog/fetch-blog"
       );
       setBlog(data);
       setTotalBlogs(data.length);
@@ -29,7 +29,7 @@ const BlogOperations = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/add-blog",
+        "https://digi-marketing-inc-back-end.vercel.app/api/blog/add-blog",
         values
       );
       toast.success("Blog Added!");
@@ -42,7 +42,7 @@ const BlogOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/delete-blog/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/blog/delete-blog/${id}`
       );
       toast.success("Blog deleted");
       fetchBlog();
@@ -64,7 +64,7 @@ const BlogOperations = () => {
     try {
       const { heading, imageUrl, slug, paragraph } = editedBlogData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/update-blog/${editingBlog._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/blog/update-blog/${editingBlog._id}`,
         {
           heading,
           imageUrl,

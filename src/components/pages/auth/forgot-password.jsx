@@ -10,7 +10,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       await axios.post(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/forgot-password/${values.email}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/users/forgot-password/${values.email}`,
         values
       );
       toast.success("Password reset link sent to your email");

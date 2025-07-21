@@ -17,7 +17,7 @@ const UserOperations = () => {
   const fetchUsers = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/fetch-users"
+        "https://digi-marketing-inc-back-end.vercel.app/api/users/fetch-users"
       );
       setUsers(data);
       setTotalUser(data.length);
@@ -30,7 +30,7 @@ const UserOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/register",
+        "https://digi-marketing-inc-back-end.vercel.app/api/users/register",
         values
       );
       toast.success("Registered successfully!");
@@ -65,7 +65,7 @@ const UserOperations = () => {
       }
 
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/delete-user/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/users/delete-user/${id}`
       );
       toast.success("User deleted successfully");
       fetchUsers();
@@ -87,7 +87,7 @@ const UserOperations = () => {
     try {
       const { userName, email, password } = editedUserData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/update-user/${editingUser._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/users/update-user/${editingUser._id}`,
         {
           userName,
           email,

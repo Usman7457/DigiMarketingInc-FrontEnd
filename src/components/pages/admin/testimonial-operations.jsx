@@ -18,7 +18,7 @@ const TestimonailOperations = () => {
   const fetchTestimonial = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/fetch-testimonial"
+        "https://digi-marketing-inc-back-end.vercel.app/api/testimonial/fetch-testimonial"
       );
       setTestimonial(data);
       setTotalTestimonial(data.length);
@@ -30,7 +30,7 @@ const TestimonailOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/add-testimonial",
+        "https://digi-marketing-inc-back-end.vercel.app/api/testimonial/add-testimonial",
         values
       );
       toast.success("Testimonial Added!");
@@ -43,7 +43,7 @@ const TestimonailOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/delete-testimonial/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/testimonial/delete-testimonial/${id}`
       );
       toast.success("Testimonial deleted");
       fetchTestimonial();
@@ -65,7 +65,7 @@ const TestimonailOperations = () => {
     try {
       const { name, imageUrl, country, message } = editedTestimonialData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/update-testimonial/${editingTestimonial._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/testimonial/update-testimonial/${editingTestimonial._id}`,
         {
           name,
           imageUrl,

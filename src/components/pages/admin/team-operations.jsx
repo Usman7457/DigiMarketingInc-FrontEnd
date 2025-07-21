@@ -18,7 +18,7 @@ const TeamOperations = () => {
   const fetchTeam = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/fetch-team"
+        "https://digi-marketing-inc-back-end.vercel.app/api/team/fetch-team"
       );
       setTeam(data);
       setTotalTeams(data.length);
@@ -31,7 +31,7 @@ const TeamOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/add-team",
+        "https://digi-marketing-inc-back-end.vercel.app/api/team/add-team",
         values
       );
       toast.success("Team Member Added!");
@@ -45,7 +45,7 @@ const TeamOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/delete-team/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/team/delete-team/${id}`
       );
       toast.success("Team Member deleted");
       fetchTeam();
@@ -67,7 +67,7 @@ const TeamOperations = () => {
     try {
       const { name, imageUrl, role } = editedTeamData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/update-team/${editingTeam._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/team/update-team/${editingTeam._id}`,
         {
           name,
           imageUrl,

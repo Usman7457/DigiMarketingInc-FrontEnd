@@ -10,7 +10,7 @@ const SignUp = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/register",
+        "https://digi-marketing-inc-back-end.vercel.app/api/users/register",
         values
       );
       toast.success("Registered successfully!");

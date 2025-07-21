@@ -14,7 +14,7 @@ const Blog = () => {
   const fetchBlog = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/fetch-blog"
+        "https://digi-marketing-inc-back-end.vercel.app/api/blog/fetch-blog"
       );
       setBlog(data);
     } catch (error) {

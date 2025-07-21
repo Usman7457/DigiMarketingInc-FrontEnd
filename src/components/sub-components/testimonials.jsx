@@ -14,7 +14,7 @@ const Testimonials = () => {
   const fetchTestimonial = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/fetch-testimonial"
+        "https://digi-marketing-inc-back-end.vercel.app/api/testimonial/fetch-testimonial"
       );
       setTestimonial(data);
     } catch (error) {

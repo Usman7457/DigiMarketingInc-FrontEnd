@@ -18,7 +18,7 @@ const Subscribers = () => {
   const fetchSubscriber = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/fetch-subscriber"
+        "https://digi-marketing-inc-back-end.vercel.app/api/subscriber/fetch-subscriber"
       );
       setSubscriber(data);
       setTotalSubscribers(data.length);
@@ -30,7 +30,7 @@ const Subscribers = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/delete-subscriber/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/subscriber/delete-subscriber/${id}`
       );
       toast.success("Subscriber deleted");
       fetchSubscriber();

@@ -9,7 +9,7 @@ const Footer = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/add-subscriber",
+        "https://digi-marketing-inc-back-end.vercel.app/api/subscriber/add-subscriber",
         values
       );
       toast.success("Subscriber Added!");

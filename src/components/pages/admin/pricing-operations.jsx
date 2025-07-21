@@ -18,7 +18,7 @@ const PricingOperations = () => {
   const fetchPricing = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/fetch-pricing"
+        "https://digi-marketing-inc-back-end.vercel.app/api/pricing/fetch-pricing"
       );
       setPricing(data);
       setTotalPackages(data.length);
@@ -30,7 +30,7 @@ const PricingOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/add-pricing",
+        "https://digi-marketing-inc-back-end.vercel.app/api/pricing/add-pricing",
         values
       );
       toast.success("Blog Added!");
@@ -43,7 +43,7 @@ const PricingOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/delete-pricing/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/pricing/delete-pricing/${id}`
       );
       toast.success("Blog deleted");
       fetchPricing();
@@ -65,7 +65,7 @@ const PricingOperations = () => {
     try {
       const { title, price, feature, cls } = editedPricingData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/update-pricing/${editingPricing._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/pricing/update-pricing/${editingPricing._id}`,
         {
           title,
           price,

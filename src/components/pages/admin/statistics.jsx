@@ -59,57 +59,57 @@ const Stats = () => {
 
   const fetchBlogData = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/fetch-blog"
+      "https://digi-marketing-inc-back-end.vercel.app/api/blog/fetch-blog"
     );
     setTotalBlogs(data.length);
   };
 
   const fetchFaq = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/fetch-faq"
+      "https://digi-marketing-inc-back-end.vercel.app/api/faq/fetch-faq"
     );
     setTotalFaqs(data.length);
   };
   const fetchTestimonial = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/fetch-testimonial"
+      "https://digi-marketing-inc-back-end.vercel.app/testimonial/fetch-testimonial"
     );
     setTotalTestimonials(data.length);
   };
 
   const fetchTeam = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/fetch-team"
+      "https://digi-marketing-inc-back-end.vercel.app/api/team/fetch-team"
     );
     setTotalTeams(data.length);
   };
   const fetchPortfolio = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/fetch-portfolio"
+      "https://digi-marketing-inc-back-end.vercel.app/api/portfolio/fetch-portfolio"
     );
     setTotalPortfolios(data.length);
   };
   const fetchPricing = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/fetch-pricing"
+      "https://digi-marketing-inc-back-end.vercel.app/api/pricing/fetch-pricing"
     );
     setTotalPackages(data.length);
   };
   const fetchUser = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/fetch-users"
+      "https://digi-marketing-inc-back-end.vercel.app/api/users/fetch-users"
     );
     setTotalUsers(data.length);
   };
   const fetchFormData = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/contact-form/fetch-contact-form"
+      "https://digi-marketing-inc-back-end.vercel.app/api/contact-form/fetch-contact-form"
     );
     setTotalFormData(data.length);
   };
   const fetchSubscriber = async () => {
     const { data } = await axios.get(
-      "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/fetch-subscriber"
+      "https://digi-marketing-inc-back-end.vercel.app/api/subscriber/fetch-subscriber"
     );
     setTotalSubscribers(data.length);
   };

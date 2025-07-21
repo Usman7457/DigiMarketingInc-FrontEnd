@@ -16,7 +16,7 @@ const FormDataOperations = () => {
   const fetchContactForm = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/contact-form/fetch-contact-form"
+        "https://digi-marketing-inc-back-end.vercel.app/api/contact-form/fetch-contact-form"
       );
       setContactForm(data);
       setTotalFormData(data.length);
@@ -27,7 +27,7 @@ const FormDataOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/contact-form/delete-contact-form/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/contact-form/delete-contact-form/${id}`
       );
       toast.success("Data deleted");
       fetchContactForm();

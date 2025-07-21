@@ -17,7 +17,7 @@ const PortfolioOperations = () => {
   const fetchPortfolio = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/fetch-portfolio"
+        "https://digi-marketing-inc-back-end.vercel.app/api/portfolio/fetch-portfolio"
       );
       setPortfolio(data);
       setTotalPortfolios(data.length);
@@ -29,7 +29,7 @@ const PortfolioOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/add-portfolio",
+        "https://digi-marketing-inc-back-end.vercel.app/api/portfolio/add-portfolio",
         values
       );
       toast.success("Portfolio Added!");
@@ -42,7 +42,7 @@ const PortfolioOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/delete-portfolio/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/portfolio/delete-portfolio/${id}`
       );
       toast.success("Portfolio deleted");
       fetchPortfolio();
@@ -64,7 +64,7 @@ const PortfolioOperations = () => {
     try {
       const { name, imageUrl, slug, type } = editedPortflolioData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/update-portfolio/${editingPortfolio._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/portfolio/update-portfolio/${editingPortfolio._id}`,
         {
           name,
           imageUrl,

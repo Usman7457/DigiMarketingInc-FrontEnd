@@ -16,7 +16,7 @@ const Login = () => {
     };
     try {
       const { data } = await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/login",
+        "https://digi-marketing-inc-back-end.vercel.app/api/users/login",
         user
       );
       saveToken(data.token);

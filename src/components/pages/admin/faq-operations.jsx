@@ -18,7 +18,7 @@ const FaqOperations = () => {
   const fetchFaq = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/fetch-faq"
+        "https://digi-marketing-inc-back-end.vercel.app/api/faq/fetch-faq"
       );
       setFaq(data);
       setTotalFaqs(data.length);
@@ -31,7 +31,7 @@ const FaqOperations = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/add-faq",
+        "https://digi-marketing-inc-back-end.vercel.app/api/faq/add-faq",
         values
       );
       toast.success("Faq Added successfully!");
@@ -45,7 +45,7 @@ const FaqOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/delete-faq/${id}`
+        `https://digi-marketing-inc-back-end.vercel.app/api/faq/delete-faq/${id}`
       );
       toast.success("FAQ deleted successfully");
       fetchFaq();
@@ -67,7 +67,7 @@ const FaqOperations = () => {
     try {
       const { target, question, answer } = editedFaqData;
       await axios.patch(
-        `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/update-faq/${editingFaq._id}`,
+        `https://digi-marketing-inc-back-end.vercel.app/api/faq/update-faq/${editingFaq._id}`,
         {
           target,
           question,

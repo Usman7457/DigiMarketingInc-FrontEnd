@@ -25,7 +25,7 @@ const Portfolio = () => {
   const fetchPortfolio = async () => {
     try {
       const { data } = await axios.get(
-        "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/fetch-portfolio"
+        "https://digi-marketing-inc-back-end.vercel.app/api/portfolio/fetch-portfolio"
       );
       setPortfolio(data);
       setFilteredArray(data);
