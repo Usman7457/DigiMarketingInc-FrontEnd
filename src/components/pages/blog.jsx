@@ -14,7 +14,11 @@ const Blog = () => {
   const fetchBlog = async () => {
     try {
       const { data } = await axios.get(
+<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/fetch-blog"
+=======
+        "http://localhost:4001/api/blog/fetch-blog"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setBlog(data);
     } catch (error) {

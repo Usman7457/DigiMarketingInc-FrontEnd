@@ -10,7 +10,11 @@ const Contact = () => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
       await axios.post(
+<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/contact-form/add-contact-form",
+=======
+        "http://localhost:4001/api/contact-form/add-contact-form",
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         values
       );
       toast.success("Message Send Successfully");

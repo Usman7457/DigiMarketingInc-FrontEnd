@@ -18,7 +18,11 @@ const TeamOperations = () => {
   const fetchTeam = async () => {
     try {
       const { data } = await axios.get(
+<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/fetch-team"
+=======
+        "http://localhost:4001/api/team/fetch-team"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setTeam(data);
       setTotalTeams(data.length);
@@ -30,10 +34,14 @@ const TeamOperations = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
+<<<<<<< HEAD
       await axios.post(
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/add-team",
         values
       );
+=======
+      await axios.post("http://localhost:4001/api/team/add-team", values);
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("Team Member Added!");
       fetchTeam();
     } catch (error) {
@@ -44,9 +52,13 @@ const TeamOperations = () => {
 
   const handleDelete = async (id) => {
     try {
+<<<<<<< HEAD
       await axios.delete(
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/delete-team/${id}`
       );
+=======
+      await axios.delete(`http://localhost:4001/api/team/delete-team/${id}`);
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("Team Member deleted");
       fetchTeam();
     } catch (error) {
@@ -67,7 +79,11 @@ const TeamOperations = () => {
     try {
       const { name, imageUrl, role } = editedTeamData;
       await axios.patch(
+<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/update-team/${editingTeam._id}`,
+=======
+        `http://localhost:4001/api/team/update-team/${editingTeam._id}`,
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         {
           name,
           imageUrl,

@@ -18,7 +18,11 @@ const PricingOperations = () => {
   const fetchPricing = async () => {
     try {
       const { data } = await axios.get(
+<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/fetch-pricing"
+=======
+        "http://localhost:4001/api/pricing/fetch-pricing"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setPricing(data);
       setTotalPackages(data.length);
@@ -29,10 +33,14 @@ const PricingOperations = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
+<<<<<<< HEAD
       await axios.post(
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/add-pricing",
         values
       );
+=======
+      await axios.post("http://localhost:4001/api/pricing/add-pricing", values);
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("Blog Added!");
       fetchPricing();
     } catch (error) {
@@ -43,7 +51,11 @@ const PricingOperations = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
+<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/delete-pricing/${id}`
+=======
+        `http://localhost:4001/api/pricing/delete-pricing/${id}`
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       toast.success("Blog deleted");
       fetchPricing();
@@ -65,7 +77,11 @@ const PricingOperations = () => {
     try {
       const { title, price, feature, cls } = editedPricingData;
       await axios.patch(
+<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/update-pricing/${editingPricing._id}`,
+=======
+        `http://localhost:4001/api/pricing/update-pricing/${editingPricing._id}`,
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         {
           title,
           price,

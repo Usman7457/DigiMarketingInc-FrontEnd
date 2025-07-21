@@ -18,7 +18,11 @@ const FaqOperations = () => {
   const fetchFaq = async () => {
     try {
       const { data } = await axios.get(
+<<<<<<< HEAD
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/fetch-faq"
+=======
+        "http://localhost:4001/api/faq/fetch-faq"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       );
       setFaq(data);
       setTotalFaqs(data.length);
@@ -30,10 +34,14 @@ const FaqOperations = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       console.log("🚀 ~ handleSubmit ~ values 12:", values);
+<<<<<<< HEAD
       await axios.post(
         "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/add-faq",
         values
       );
+=======
+      await axios.post("http://localhost:4001/api/faq/add-faq", values);
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("Faq Added successfully!");
       fetchFaq();
     } catch (error) {
@@ -44,9 +52,13 @@ const FaqOperations = () => {
 
   const handleDelete = async (id) => {
     try {
+<<<<<<< HEAD
       await axios.delete(
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/delete-faq/${id}`
       );
+=======
+      await axios.delete(`http://localhost:4001/api/faq/delete-faq/${id}`);
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
       toast.success("FAQ deleted successfully");
       fetchFaq();
     } catch (error) {
@@ -67,7 +79,11 @@ const FaqOperations = () => {
     try {
       const { target, question, answer } = editedFaqData;
       await axios.patch(
+<<<<<<< HEAD
         `https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/update-faq/${editingFaq._id}`,
+=======
+        `http://localhost:4001/api/faq/update-faq/${editingFaq._id}`,
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
         {
           target,
           question,

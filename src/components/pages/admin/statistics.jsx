@@ -59,57 +59,93 @@ const Stats = () => {
 
   const fetchBlogData = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/blog/fetch-blog"
+=======
+      "http://localhost:4001/api/blog/fetch-blog"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalBlogs(data.length);
   };
 
   const fetchFaq = async () => {
+<<<<<<< HEAD
     const { data } = await axios.get(
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/faq/fetch-faq"
     );
+=======
+    const { data } = await axios.get("http://localhost:4001/api/faq/fetch-faq");
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     setTotalFaqs(data.length);
   };
   const fetchTestimonial = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/testimonial/fetch-testimonial"
+=======
+      "http://localhost:4001/api/testimonial/fetch-testimonial"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalTestimonials(data.length);
   };
 
   const fetchTeam = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/team/fetch-team"
+=======
+      "http://localhost:4001/api/team/fetch-team"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalTeams(data.length);
   };
   const fetchPortfolio = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/portfolio/fetch-portfolio"
+=======
+      "http://localhost:4001/api/portfolio/fetch-portfolio"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalPortfolios(data.length);
   };
   const fetchPricing = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/pricing/fetch-pricing"
+=======
+      "http://localhost:4001/api/pricing/fetch-pricing"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalPackages(data.length);
   };
   const fetchUser = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/users/fetch-users"
+=======
+      "http://localhost:4001/api/users/fetch-users"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalUsers(data.length);
   };
   const fetchFormData = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/contact-form/fetch-contact-form"
+=======
+      "http://localhost:4001/api/contact-form/fetch-contact-form"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalFormData(data.length);
   };
   const fetchSubscriber = async () => {
     const { data } = await axios.get(
+<<<<<<< HEAD
       "https://digi-marketing-inc-back-5ps5l19yf.vercel.app/api/subscriber/fetch-subscriber"
+=======
+      "http://localhost:4001/api/subscriber/fetch-subscriber"
+>>>>>>> 5773b34dc1b0b531db7e57a19569c2364395501d
     );
     setTotalSubscribers(data.length);
   };
